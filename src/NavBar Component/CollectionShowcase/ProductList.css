@@ -1,0 +1,118 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 20px; /* added margin to remove gap on left and right side */
+}
+
+.product {
+  margin: 10px;
+  width: 220px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: none;
+  position: relative;
+  transition: border 0.3s; /* added transition effect */
+}
+
+.product:hover {
+  border: 1px solid #000; /* added black border on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* added box shadow on hover */
+}
+
+.product img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.product img {
+  width: 100%;
+  height: 190px; /* increased height from 120px to 150px */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product:hover .buttons {
+  opacity: 1;
+}
+
+/* .buy-now {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.buy-now:hover {
+  background-color: #1abc9c;
+} */
+
+.add-to-cart {
+  background-color: lightgreen;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: lightgreen;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.product-info h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-family: cursive;
+}
+
+.product-info p {
+  font-size: 20px; /* reduced font size from 16px to 14px */
+  color: grey;
+}
+.product img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+/* Media Queries */
+@media (max-width: 1024px) {
+  .product {
+    width: 30%; /* Three items per row on tablets */
+    max-width: 300px; /* Max width for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 45%; /* Two items per row on mobile devices */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: 100%; /* One item per row on smaller screens */
+    max-width: 100%;
+  }
+}

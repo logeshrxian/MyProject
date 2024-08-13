@@ -1,0 +1,78 @@
+.earings-gallery {
+  text-align: center;
+}
+
+.earings-title {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.earings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.earings-product {
+  width: 22%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.earings-product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.earings-product img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .earings-product {
+    width: 30%;
+  }
+
+  .earings-title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .earings-product {
+    width: 45%;
+  }
+
+  .earings-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .earings-product {
+    width: 90%;
+  }
+
+  .earings-title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .earings-product {
+    width: 100%;
+  }
+
+  .earings-title {
+    font-size: 20px;
+  }
+}

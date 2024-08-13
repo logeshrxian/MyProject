@@ -1,0 +1,171 @@
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Left Container */
+.left-container {
+  width: 40%;
+  display: flex;
+  padding-left: 16px;
+}
+
+.essentials-item {
+  width: 100%;
+  position: relative;
+}
+
+.essentials-item img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+/* Right Container */
+.right-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.new-in-item {
+  padding-right: 16px;
+  width: 40%;
+  position: relative;
+}
+
+.new-in-item img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+/* Boho and Pearls Container */
+.boho-pearls-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.boho-item,
+.pearls-item {
+  width: 100%;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.boho-item img,
+.pearls-item img {
+  width: 100%;
+  height: 207px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.boho-item img {
+  border-radius: 10px;
+}
+
+.pearls-item img {
+  filter: grayscale(0.5);
+}
+
+/* Media Queries */
+
+/* For large desktop screens */
+@media (min-width: 1200px) {
+  .left-container {
+    width: 40%;
+  }
+  .right-container {
+    width: 60%;
+  }
+}
+
+/* For tablets and medium devices (750px to 990px) */
+@media (min-width: 750px) and (max-width: 990px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-container,
+  .right-container {
+    width: 100%;
+    padding: 0;
+  }
+  .left-container {
+    margin-bottom: 20px;
+  }
+  .right-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .new-in-item,
+  .boho-pearls-container {
+    width: 100%;
+    padding-right: 0;
+  }
+  .boho-pearls-container {
+    flex-direction: column;
+  }
+  .boho-item,
+  .pearls-item {
+    width: 100%;
+    height: auto; /* Adjust height to auto for better scaling */
+    margin-bottom: 20px;
+  }
+  .new-in-item img,
+  .boho-item img,
+  .pearls-item img {
+    height: auto; /* Ensure images scale correctly */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 759px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-container {
+    width: 100%;
+    padding-left: 0;
+  }
+  .right-container {
+    width: 100%;
+    flex-direction: column;
+    padding-right: 0;
+  }
+  .new-in-item {
+    width: 100%;
+    padding-right: 0;
+  }
+  .boho-pearls-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .boho-item,
+  .pearls-item {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+/* For small mobile screens (320px to 479px) */
+@media (max-width: 479px) {
+  .essentials-item img,
+  .new-in-item img,
+  .boho-item img,
+  .pearls-item img {
+    height: auto; /* Adjust height to auto for better scaling */
+  }
+
+  .mj-values-title {
+    font-size: 24px;
+  }
+  
+  .mj-values-item img {
+    max-width: 100%;
+  }
+}

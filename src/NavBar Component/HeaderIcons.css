@@ -1,0 +1,57 @@
+.header-icons__container {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center;
+  background-color: #f8f5e4;
+  padding: 10px 0;
+  flex-wrap: wrap; /* Allow wrapping to accommodate different screen sizes */
+}
+
+.header-icon {
+  display: flex;
+  align-items: center; /* Align items horizontally */
+  color: #a67c52;
+  margin: 0 15px; /* Add margin to space out the icons */
+}
+
+.header-icon p {
+  margin: 0;
+  font-size: 12px;
+  margin-left: 10px; /* Space between icon and text */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  .header-icons__container {
+    flex-wrap: wrap; /* Allow wrapping on smaller devices */
+    justify-content: center; /* Center the icons */
+    padding: 15px 0; /* Adjust padding */
+  }
+
+  .header-icon {
+    margin: 10px; /* Increase margin for spacing */
+  }
+
+  .header-icon p {
+    font-size: 14px; /* Increase font size for better readability */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .header-icons__container {
+    flex-wrap: nowrap; /* Ensure icons stay in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 20px 0; /* Adjust padding */
+  }
+
+  .header-icon {
+    margin: 10px 5px; /* Adjust margin for spacing */
+  }
+
+  .header-icon p {
+    font-size: 16px; /* Further increase font size for better readability */
+  }
+}

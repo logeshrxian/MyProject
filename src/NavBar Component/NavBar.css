@@ -1,0 +1,208 @@
+/* General Styles */
+.navbar__container {
+    width: 100%;
+    background-color: #f8f5e4;
+    padding: 10px 0;
+}
+
+.navbar__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.navbar__contact {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__contact p {
+    margin: 0;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.navbar__icons {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.navbar__icons a {
+    margin: 0 15px;
+    color: #000;
+    font-size: 1.5em;
+}
+
+/* Black search button styles */
+.search-button {
+    display: none; /* Hidden by default */
+    color: black; /* White text color */
+   background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 50%; /* Rounded button */
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Banner Styles */
+.navbar__banner {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px; /* Adjusted margin for spacing */
+}
+
+.navbar__banner img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar__hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 50px; /* Adjust position to the left */
+    font-size: 1.5em; /* Size for visibility */
+}
+
+/* Navigation Menu Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f5e4;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__item:hover .navbar__dropdown {
+    display: block;
+}
+
+.navbar__sale a {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .navbar__top {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar__banner img {
+        width: 80%; /* Adjust logo size */
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+    .navbar__contact {
+        justify-content: center; /* Center contact info */
+    }
+
+    .navbar__icons {
+        padding: 10px 0; /* Add padding for spacing */
+    }
+
+    .navbar__icons a {
+        margin: 0 10px; /* Adjust icon spacing */
+        font-size: 1.2em; /* Decrease icon size */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack menu vertically */
+    }
+
+    .navbar__menu {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center menu items */
+        padding: 5px 0; /* Add padding for spacing */
+    }
+
+    .navbar__menu a {
+        margin: 5px 10px; /* Adjust margin */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 500px) {
+    .navbar__contact p {
+        display: none; /* Hide the phone number */
+    }
+
+    .navbar__icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+    }
+
+    .navbar__icons a {
+        margin: 0 5px; /* Adjust icon spacing for smaller screens */
+    }
+
+    .navbar__hamburger {
+        display: block;
+        left: 5px; /* Adjust position to the left */
+    }
+
+    .navbar {
+        display: none; /* Hide navigation menu by default */
+    }
+
+    .navbar.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__menu a {
+        margin: 10px 0; /* Stack menu items vertically */
+    }
+
+    /* Show the black search button */
+    .search-button {
+        display: block; 
+        left: 35px;/* Show the search button */
+    }
+}

@@ -1,0 +1,134 @@
+/* CSS for Blog Component */
+.App {
+  text-align: center;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  width: 100%;
+}
+
+.image-item {
+  flex: 1; /* Allows the items to grow and shrink as needed */
+  max-width: 33.33%; /* Three items per row by default */
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.image-text h2 {
+  margin: 0;
+}
+
+.image-text p {
+  margin: 5px 0;
+}
+
+.image-text button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .image-item {
+    max-width: 50%; /* Two items per row on smaller tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-item {
+    max-width: 100%; /* One item per row on mobile devices */
+  }
+}
+
+@media (max-width: 700px) {
+  .image-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+  .image-item {
+    max-width: 100%;
+  }
+  
+  .image-text {
+    position: static; /* Removes absolute positioning */
+    background-color: transparent; /* Removes background color */
+    color: black; /* Changes text color */
+    padding: 0; /* Removes padding */
+    text-align: left; /* Aligns text to the left */
+  }
+
+  .image-text h2 {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .image-text p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .image-text button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    max-width: 100%; /* Ensures proper display on very small devices */
+  }
+
+  .image-text {
+    position: static; /* Removes absolute positioning */
+    background-color: transparent; /* Removes background color */
+    color: black; /* Changes text color */
+    padding: 0; /* Removes padding */
+  }
+
+  .image-text h2 {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .image-text p {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .image-text button {
+    padding: 6px 12px; /* Adjust button padding */
+    font-size: 12px; /* Adjust button font size */
+  }
+}
